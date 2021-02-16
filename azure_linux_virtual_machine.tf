@@ -14,7 +14,7 @@ resource "azurerm_linux_virtual_machine" "vm" {
   name                = format("redisgeek-vm-%s", random_string.vm_name.result)
   resource_group_name = azurerm_resource_group.resource_group.name
   location            = azurerm_resource_group.resource_group.location
-  size                = "DSv2"
+  size                = "Standard_D1_v2"
   admin_username      = "redisgeek"
   network_interface_ids = [
     azurerm_network_interface.network_interface.id,
