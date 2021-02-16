@@ -34,3 +34,7 @@ variable "tags" {
   default     = {}
   type        = map(string)
 }
+
+variable "public_key" {
+  type = string
+}
