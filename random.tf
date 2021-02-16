@@ -14,3 +14,9 @@ resource "random_string" "vnet_name" {
   special = false
   upper = false
 }
+
+resource "random_string" "subnet_name" {
+  length = 4
+  special = false
+  upper = false
+}
