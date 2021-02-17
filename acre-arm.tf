@@ -6,7 +6,11 @@ resource "azurerm_resource_group_template_deployment" "acre" {
   {
     acre_name = format("redisgeek-%s", random_string.acre_name.result),
     location = azurerm_resource_group.resource_group.location,
-
+    acre_sku = var.acre_sku,
+    acre_capacity = var.acre_capacity,
+    acre_client_protocol = var.acre_client_protocol,
+    acre_eviction_policy = var.acre_eviction_policy,
+    acre_cluster_policy = var.acre_cluster_policy
   })
 
   depends_on = [azurerm_resource_group.resource_group]
