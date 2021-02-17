@@ -1,6 +1,36 @@
+variable "acre_capacity" {
+  type = number
+  default = 2
+}
+
+variable "acre_client_protocol" {
+  type = string
+  default = "Encrypted"
+}
+
+variable "acre_cluster_policy" {
+  type = string
+  default = "EnterpriseCluster"
+}
+
 variable "acre_deployment_mode" {
   type = string
   default = "Incremental"
+}
+
+variable "acre_eviction_policy" {
+  type = string
+  default = "NoEviction"
+}
+
+variable "acre_template_path" {
+  description = "Path to ARM template being sourced"
+  default = "./ARM/acre/json.template"
+}
+
+variable "acre_sku" {
+  type = string
+  default = "Enterprise_E10"
 }
 
 variable "client_id" {
