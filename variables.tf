@@ -23,6 +23,11 @@ variable "acre_eviction_policy" {
   default = "NoEviction"
 }
 
+variable "acre_resource_id" {
+  type = string
+  default = ""
+}
+
 variable "acre_template_path" {
   description = "Path to ARM template being sourced"
   default = "./ARM/ACRE/json.template"
