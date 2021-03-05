@@ -23,7 +23,7 @@ variable "acre_eviction_policy" {
   default = "NoEviction"
 }
 
-variable "acre_resource_id" {
+variable "acre_group_nickname" {
   type = string
   default = ""
 }
@@ -54,7 +54,11 @@ variable "tenant_id" {
   type = string
 }
 
-variable "location" {
+variable "location_1" {
+  type = string
+}
+
+variable "location_2" {
   type = string
 }
 
@@ -68,8 +72,4 @@ variable "tags" {
   description = "Key/value tags to assign to all resources."
   default     = {}
   type        = map(string)
-}
-
-variable "public_key" {
-  type = string
 }
