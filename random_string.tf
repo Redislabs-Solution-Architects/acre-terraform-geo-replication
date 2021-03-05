@@ -9,38 +9,20 @@ resource "random_string" "storage_account_name" {
   upper = false
 }
 
-resource "random_string" "vnet_name" {
+resource "random_string" "acre_name_1" {
   length = 4
   special = false
   upper = false
 }
 
-resource "random_string" "subnet_name" {
+resource "random_string" "acre_name_2" {
   length = 4
   special = false
   upper = false
 }
 
-resource "random_string" "nic_name" {
-  length = 4
-  special = false
-  upper = false
-}
-
-resource "random_string" "vm_name" {
-  length = 4
-  special = false
-  upper = false
-}
-
-resource "random_string" "acre_name" {
-  length = 4
-  special = false
-  upper = false
-}
-
-resource "random_string" "private_link_name" {
-  length = 4
+resource "random_string" "acre_group_name" {
+  length = 8
   special = false
   upper = false
 }
