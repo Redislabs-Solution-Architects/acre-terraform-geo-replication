@@ -25,7 +25,7 @@ variable "acre_eviction_policy" {
 
 variable "acre_group_nickname" {
   type = string
-  default = ""
+  default = "redisgeek"
 }
 
 variable "acre_template_path" {

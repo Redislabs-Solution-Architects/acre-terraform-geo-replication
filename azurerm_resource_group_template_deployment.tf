@@ -28,7 +28,8 @@ resource "azurerm_resource_group_template_deployment" "acre_2" {
     acre_capacity = var.acre_capacity,
     acre_client_protocol = var.acre_client_protocol,
     acre_eviction_policy = var.acre_eviction_policy,
-    acre_cluster_policy = var.acre_cluster_policy
+    acre_cluster_policy = var.acre_cluster_policy,
+    acre_group_nickname = var.acre_group_nickname
   })
 
   depends_on = [azurerm_resource_group.resource_group]
