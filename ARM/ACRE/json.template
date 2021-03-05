@@ -6,7 +6,7 @@
         {
             "name": "${acre_name}",
             "type": "Microsoft.Cache/redisEnterprise",
-            "apiVersion": "2020-10-01-preview",
+            "apiVersion": "2021-03-01",
             "properties": {},
             "location": "${location}",
             "dependsOn": [],
@@ -24,22 +24,14 @@
                 {
                     "name": "${acre_name}/default",
                     "type": "Microsoft.Cache/redisEnterprise/databases",
-                    "apiVersion": "2020-10-01-preview",
+                    "apiVersion": "2021-02-01-preview",
                     "properties": {
                         "clientProtocol": "${acre_client_protocol}",
                         "evictionPolicy": "${acre_eviction_policy}",
                         "clusteringPolicy": "${acre_cluster_policy}",
-                        "modules": [
-                            {
-                                "name": "RedisBloom"
-                            },
-                            {
-                                "name": "RedisTimeSeries"
-                            },
-                            {
-                                "name": "RediSearch"
-                            }
-                        ]
+                        "geoReplication": {
+                            "groupNickname": "${acre_group_nickname}"
+                        }
                     },
                     "dependsOn": [
                         "Microsoft.Cache/redisEnterprise/${acre_name}"
