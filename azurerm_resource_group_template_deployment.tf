@@ -33,5 +33,8 @@ resource "azurerm_resource_group_template_deployment" "acre_2" {
     acre_group_nickname = random_string.acre_group_name.result
   })
 
-  depends_on = [azurerm_resource_group.resource_group]
+  depends_on = [
+    azurerm_resource_group.resource_group,
+    azurerm_resource_group_template_deployment.acre_1
+  ]
 }
