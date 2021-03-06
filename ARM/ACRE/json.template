@@ -30,7 +30,12 @@
                         "evictionPolicy": "${acre_eviction_policy}",
                         "clusteringPolicy": "${acre_cluster_policy}",
                         "geoReplication": {
-                            "groupNickname": "${acre_group_nickname}"
+                            "groupNickname": "${acre_group_nickname}",
+                            "linkedDatabases": [
+                                {
+                                    "id": "/subscriptions/${subscription_id}/resourceGroups/${resource_group_name}/providers/Microsoft.Cache/redisEnterprise/${acre_name}/databases/default"
+                                }
+                            ]
                         }
                     },
                     "dependsOn": [
