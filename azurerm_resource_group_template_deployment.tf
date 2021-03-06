@@ -34,7 +34,6 @@ resource "azurerm_resource_group_template_deployment" "acre_2" {
   })
 
   depends_on = [
-    azurerm_resource_group.resource_group,
     azurerm_resource_group_template_deployment.acre_1
   ]
 }
