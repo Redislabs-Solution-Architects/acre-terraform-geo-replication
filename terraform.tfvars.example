@@ -2,5 +2,5 @@ subscription_id =
 tenant_id =
 client_id =
 client_secret =
-location_1 =
-location_2 =
+location_1 = eastus2
+location_2 = westus2
