@@ -14,12 +14,12 @@
                 "name": "${acre_sku}",
                 "capacity": "${acre_capacity}"
             },
-            "tags": {},
             "zones": [
                 "1",
                 "2",
                 "3"
             ],
+            "tags": {},
             "resources": [
                 {
                     "name": "${acre_name}/default",
@@ -28,7 +28,7 @@
                     "properties": {
                         "clientProtocol": "${acre_client_protocol}",
                         "evictionPolicy": "${acre_eviction_policy}",
-                        "clusteringPolicy": "${acre_cluster_policy}",
+                            "clusteringPolicy": "${acre_cluster_policy}",
                         "geoReplication": {
                             "groupNickname": "${acre_group_nickname}",
                             "linkedDatabases": [
@@ -45,5 +45,5 @@
                 }
             ]
         }
-  ]
+    ]
 }

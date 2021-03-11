@@ -1,0 +1,72 @@
+{
+    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "0.0.0.1",
+    "parameters": {},
+    "resources": [
+        {
+            "name": "${acre_name_2}",
+            "type": "Microsoft.Cache/redisEnterprise",
+            "apiVersion": "2021-03-01",
+            "properties": {},
+            "location": "${location}",
+            "dependsOn": [],
+            "sku": {
+                "name": "${acre_sku}",
+                "capacity": ${acre_capacity}
+            },
+            "zones": [
+                "1",
+                "2",
+                "3"
+            ],
+            "tags": {}
+        },
+        {
+            "apiVersion": "2017-05-10",
+            "type": "Microsoft.Resources/deployments",
+            "name": "${acre_1_deployment_name}",
+            "resources": [],
+            "dependsOn": [
+                "${acre_name_2}"
+            ],
+            "properties": {
+                "mode": "Incremental",
+                "parameters": {},
+                "template": {
+                    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+                    "contentVersion": "1.0.0.0",
+                    "parameters": {},
+                    "variables": {},
+                    "resources": [
+                        {
+                            "name": "${acre_name_1}/default",
+                            "type": "Microsoft.Cache/redisEnterprise/databases",
+                            "apiVersion": "2021-02-01-preview",
+                            "properties": {
+                                "clientProtocol": "${acre_client_protocol}",
+                                "evictionPolicy": "${acre_eviction_policy}",
+                                "clusteringPolicy": "${acre_cluster_policy}",
+                                "geoReplication": {
+                                    "groupNickname": "${acre_group_nickname}",
+                                    "linkedDatabases": [
+                                        {
+                                            "id": "/subscriptions/${subscription_id}/resourcegroups/${resource_group_name}/providers/microsoft.cache/redisenterprise/${acre_name_1}/databases/default"
+                                        },
+                                        {
+                                            "id": "/subscriptions/${subscription_id}/resourceGroups/${resource_group_name}/providers/Microsoft.Cache/redisEnterprise/${acre_name_2}/databases/default"
+                                        }
+                                    ]
+                                }
+                            },
+                            "dependsOn": [],
+                            "tags": {}
+                        }
+                    ],
+                    "outputs": {}
+                }
+            },
+            "subscriptionId": "${subscription_id}",
+            "resourceGroup": "${resource_group_name}"
+        }
+    ]
+}

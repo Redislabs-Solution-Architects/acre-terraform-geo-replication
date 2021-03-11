@@ -23,9 +23,14 @@ variable "acre_eviction_policy" {
   default = "NoEviction"
 }
 
-variable "acre_template_path" {
+variable "acre_template_path_1" {
   description = "Path to ARM template being sourced"
-  default = "./ARM/ACRE/json.template"
+  default = "./ARM/ACRE/json1.template"
+}
+
+variable "acre_template_path_2" {
+  description = "Path to ARM template being sourced"
+  default = "./ARM/ACRE/json2.template"
 }
 
 variable "acre_sku" {
@@ -50,10 +55,12 @@ variable "tenant_id" {
 }
 
 variable "location_1" {
+  default = "eastus2"
   type = string
 }
 
 variable "location_2" {
+  default = "westus2"
   type = string
 }
 
