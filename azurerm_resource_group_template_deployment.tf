@@ -20,8 +20,7 @@ resource "azurerm_resource_group_template_deployment" "acre_1" {
 }
 
 resource "azurerm_resource_group_template_deployment" "acre_2" {
-  count = 0
-  name = format("redisgeek%s", random_string.acre_name_2.result)
+  name = format("redisgeek2%s", random_string.acre_name_2.result)
   resource_group_name = azurerm_resource_group.resource_group.name
   deployment_mode = var.acre_deployment_mode
   template_content = templatefile(var.acre_template_path_2,
