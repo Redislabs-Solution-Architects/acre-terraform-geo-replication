@@ -55,12 +55,12 @@ variable "tenant_id" {
 }
 
 variable "location_1" {
-  default = "eastus2"
+  default = "eastus"
   type = string
 }
 
 variable "location_2" {
-  default = "westus2"
+  default = "westus"
   type = string
 }
 

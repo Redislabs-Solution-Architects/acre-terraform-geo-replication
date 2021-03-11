@@ -28,7 +28,7 @@
                     "properties": {
                         "clientProtocol": "${acre_client_protocol}",
                         "evictionPolicy": "${acre_eviction_policy}",
-                            "clusteringPolicy": "${acre_cluster_policy}",
+                        "clusteringPolicy": "${acre_cluster_policy}",
                         "geoReplication": {
                             "groupNickname": "${acre_group_nickname}",
                             "linkedDatabases": [

@@ -10,6 +10,7 @@ in two separate regions with active geo-replication
     - _Service Principal_
     - **Resource Group**
       - **Storage Account**
+        - **Storage Container**
       - **Redis Enterprise Cluster in Region 1**
       - **Redis Enterprise Cluster in Region 2**
 
