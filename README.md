@@ -57,6 +57,14 @@ terraform apply
 
 Have fun!
 
+## Regions
+
+There are default regions configured in the **variables.tf** file.
+The ARM templates are expecting 3 AZs in each region.
+If every region-cluster is deployed with 3 AZs, then the SLA is 99.999.
+You can update your **terraform.tfvars** to use another region with 3 AZs.
+Or you can use another region and also update the ARM template for that cluster.
+
 ## Cleanup
 
 Remove the resources that were created.
