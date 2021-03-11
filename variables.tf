@@ -60,7 +60,7 @@ variable "location_1" {
 }
 
 variable "location_2" {
-  default = "westus"
+  default = "centralus"
   type = string
 }
 
