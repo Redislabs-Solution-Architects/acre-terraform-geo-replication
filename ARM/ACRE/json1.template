@@ -24,7 +24,7 @@
                 {
                     "name": "${acre_name}/default",
                     "type": "Microsoft.Cache/redisEnterprise/databases",
-                    "apiVersion": "2021-02-01-preview",
+                    "apiVersion": "2021-03-01",
                     "properties": {
                         "clientProtocol": "${acre_client_protocol}",
                         "evictionPolicy": "${acre_eviction_policy}",
