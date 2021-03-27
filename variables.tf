@@ -54,16 +54,6 @@ variable "tenant_id" {
   type = string
 }
 
-variable "location_1" {
-  default = "eastus"
-  type    = string
-}
-
-variable "location_2" {
-  default = "centralus"
-  type    = string
-}
-
 variable "cloud_name" {
   description = "The Azure cloud environment to use. Available values at https://www.terraform.io/docs/providers/azurerm/#environment"
   default     = "public"
