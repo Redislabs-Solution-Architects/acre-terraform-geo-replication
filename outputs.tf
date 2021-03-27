@@ -8,5 +8,5 @@ locals {
 
 output "redisgeek_config" {
   value     = jsonencode(local.redisgeek_config)
-  sensitive = false
+  sensitive = true
 }
