@@ -1,40 +1,40 @@
 variable "acre_capacity" {
-  type = number
+  type    = number
   default = 2
 }
 
 variable "acre_client_protocol" {
-  type = string
+  type    = string
   default = "Encrypted"
 }
 
 variable "acre_cluster_policy" {
-  type = string
+  type    = string
   default = "EnterpriseCluster"
 }
 
 variable "acre_deployment_mode" {
-  type = string
+  type    = string
   default = "Incremental"
 }
 
 variable "acre_eviction_policy" {
-  type = string
+  type    = string
   default = "NoEviction"
 }
 
 variable "acre_template_path_1" {
   description = "Path to ARM template being sourced"
-  default = "./ARM/ACRE/json1.template"
+  default     = "./ARM/ACRE/json1.template"
 }
 
 variable "acre_template_path_2" {
   description = "Path to ARM template being sourced"
-  default = "./ARM/ACRE/json2.template"
+  default     = "./ARM/ACRE/json2.template"
 }
 
 variable "acre_sku" {
-  type = string
+  type    = string
   default = "Enterprise_E10"
 }
 
@@ -56,12 +56,12 @@ variable "tenant_id" {
 
 variable "location_1" {
   default = "eastus"
-  type = string
+  type    = string
 }
 
 variable "location_2" {
   default = "centralus"
-  type = string
+  type    = string
 }
 
 variable "cloud_name" {

@@ -12,7 +12,7 @@
             "dependsOn": [],
             "sku": {
                 "name": "${acre_sku}",
-                "capacity": ${acre_capacity}
+                "capacity": "${acre_capacity}"
             },
             "zones": [
                 "1",
@@ -33,7 +33,7 @@
                 "mode": "Incremental",
                 "parameters": {},
                 "template": {
-                    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+                    "$schema": "http://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
                     "contentVersion": "1.0.0.0",
                     "parameters": {},
                     "variables": {},

@@ -4,5 +4,9 @@ provider "azurerm" {
   subscription_id = var.subscription_id
   tenant_id       = var.tenant_id
   environment     = var.cloud_name
-  features {}
+  features {
+    template_deployment {
+      delete_nested_items_during_deletion = false
+    }
+  }
 }
