@@ -5,7 +5,7 @@ resource "azurerm_resource_group_template_deployment" "acre_1" {
   template_content = templatefile(var.acre_template_path_1,
     {
       acre_name            = format("redisgeek%s", random_string.acre_name_1.result),
-      location             = random_shuffle.redisgeek.result[0],
+      location             = random_shuffle.regions-with-az.result[0],
       acre_sku             = var.acre_sku,
       acre_capacity        = var.acre_capacity,
       acre_client_protocol = var.acre_client_protocol,
@@ -28,7 +28,7 @@ resource "azurerm_resource_group_template_deployment" "acre_2" {
       acre_name_1            = format("redisgeek%s", random_string.acre_name_1.result),
       acre_name_2            = format("redisgeek%s", random_string.acre_name_2.result),
       acre_1_deployment_name = azurerm_resource_group_template_deployment.acre_1.name,
-      location               = random_shuffle.redisgeek.result[1],
+      location               = random_shuffle.regions-with-az.result[1],
       acre_sku               = var.acre_sku,
       acre_capacity          = var.acre_capacity,
       acre_client_protocol   = var.acre_client_protocol,
