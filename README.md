@@ -26,7 +26,7 @@ in two separate regions with active geo-replication
     
 ### Tools
 
-1. Terraform CLI 0.15.0
+1. Terraform CLI 0.14.0
 
 ## Getting started
 
