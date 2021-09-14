@@ -36,7 +36,19 @@
                                     "id": "/subscriptions/${subscription_id}/resourceGroups/${resource_group_name}/providers/Microsoft.Cache/redisEnterprise/${acre_name}/databases/default"
                                 }
                             ]
-                        }
+                        },
+                        "persistence": {
+                          "aofEnabled": "false",
+                          "rdbEnabled": "false",
+                          "aofFrequency": "1s",
+                          "rdbFrequency": "1h"
+                        },
+                        "modules": [
+                          {
+                            "name": "RediSearch",
+                            "args": ""
+                          }
+                        ]
                     },
                     "dependsOn": [
                         "Microsoft.Cache/redisEnterprise/${acre_name}"
