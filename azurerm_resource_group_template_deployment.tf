@@ -12,7 +12,7 @@ resource "azurerm_resource_group_template_deployment" "acre_1" {
       acre_eviction_policy = var.acre_eviction_policy,
       acre_cluster_policy  = var.acre_cluster_policy,
       acre_group_nickname  = random_string.acre_group_name.result,
-      subscription_id      = data.azurerm_subscription.current.subscription_id,
+      subscription_id        = data.azurerm_client_config.current.subscription_id,
       resource_group_name  = azurerm_resource_group.resource_group.name
   })
 
@@ -35,7 +35,7 @@ resource "azurerm_resource_group_template_deployment" "acre_2" {
       acre_eviction_policy   = var.acre_eviction_policy,
       acre_cluster_policy    = var.acre_cluster_policy,
       acre_group_nickname    = random_string.acre_group_name.result,
-      subscription_id        = data.azurerm_subscription.current.subscription_id,
+      subscription_id        = data.azurerm_client_config.current.subscription_id,
       resource_group_name    = azurerm_resource_group.resource_group.name
   })
 
