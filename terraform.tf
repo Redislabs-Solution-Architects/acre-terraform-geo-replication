@@ -7,7 +7,6 @@ terraform {
       source = "hashicorp/azurerm"
     }
   }
-  backend "remote" {}
 }
 
 provider "azurerm" {
