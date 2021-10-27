@@ -1,17 +1,20 @@
 terraform {
-  required_version = ">= 0.14.0"
   required_providers {
     random = {
-      source  = "hashicorp/random"
-      version = "3.1.0"
-    }
-    azuread = {
-      source  = "hashicorp/azuread"
-      version = "2.2.1"
+      source = "hashicorp/random"
     }
     azurerm = {
-      source  = "hashicorp/azurerm"
-      version = "2.76.0"
+      source = "hashicorp/azurerm"
+    }
+  }
+  backend "remote" {}
+}
+
+provider "azurerm" {
+  environment = var.cloud_name
+  features {
+    template_deployment {
+      delete_nested_items_during_deletion = false
     }
   }
 }
