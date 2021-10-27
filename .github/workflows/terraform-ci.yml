@@ -26,7 +26,7 @@ jobs:
 
       - name: Terraform Init Upgrade
         id: init
-        run: export TF_WORKSPACE=${{ github.event.repository.name }} && terraform init -upgrade -backend-config='organization=${{ github.repository_owner }}'
+        run: terraform init -upgrade -backend-config=redisgeek.hcl
 
       - name: Terraform Validate
         id: validate
