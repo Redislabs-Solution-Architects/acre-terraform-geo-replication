@@ -30,7 +30,7 @@ jobs:
 
       - name: Terraform Init Upgrade
         id: init
-        run: terraform init -upgrade -backend-config="organization=${{ github.repository_owner }}"
+        run: terraform init -upgrade -backend-config='organization=${{ github.repository_owner }}'
 
       - name: Terraform Validate
         id: validate
