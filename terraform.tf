@@ -7,7 +7,9 @@ terraform {
       source = "hashicorp/azurerm"
     }
   }
-  backend "remote" {}
+  backend "remote" {
+    workspaces { name = "acre-terraform-geo-replication-simple" }
+  }
 }
 
 provider "azurerm" {
