@@ -24,13 +24,13 @@ jobs:
         id: fmt
         run: terraform fmt -check
 
+      - name: Terraform Select Workspace
+        id: select
+        run: export TF_WORKSPACE=${{ github.event.repository.name }}
+
       - name: Terraform Init Upgrade
         id: init
         run: terraform init -upgrade -backend-config="organization=${{ github.repository_owner }}"
-
-      - name: Terraform Select Workspace
-        id: select
-        run: terraform workspace select ${{ github.event.repository.name }}
 
       - name: Terraform Validate
         id: validate
