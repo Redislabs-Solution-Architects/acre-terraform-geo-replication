@@ -19,7 +19,7 @@ resource "azurerm_resource_group_template_deployment" "acre_1" {
 }
 
 resource "azurerm_resource_group_template_deployment" "acre_2" {
-  name                = format("redisgeek%s", random_shuffle.regions-with-az.result[0])
+  name                = format("redisgeek%s", random_shuffle.regions-with-az.result[1])
   resource_group_name = azurerm_resource_group.resource_group.name
   deployment_mode     = var.acre_deployment_mode
   template_content = templatefile(format("${path.module}%s", var.acre_template_path_2),
